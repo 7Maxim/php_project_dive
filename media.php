@@ -36,11 +36,6 @@ if (empty($edit_user['id'])) {
 }
 
 
-//var_dump(has_image($edit_user_id));
-//exit();
-
-
-
 
 
 ?>

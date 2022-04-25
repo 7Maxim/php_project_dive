@@ -8,11 +8,6 @@ if (is_not_logged()) {
 }
 
 
-//echo "<pre>";
-//print_r($_SESSION);
-//exit();
-
-
 $user_logged = get_user_by_email($_SESSION['email']);
 
 $users = select_all_users();

@@ -29,21 +29,6 @@ if (empty($edit_user['id'])) {
 }
 
 
-echo '<pre>';
-print_r($edit_user);
-
-
-/*
-if ($edit_user['image'] !== 'avatar-m.png') {
-    deleteImg('../img/uploads/', $edit_user['image']);
-    echo "1";
-}
-
-
-exit();
-*/
-
-
 if (is_author($logged_user['id'], $edit_user_id)) {
 
     if ($edit_user['image'] !== 'avatar-m.png') {
