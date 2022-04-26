@@ -172,6 +172,34 @@ function edit_credentials($user_id, $email, $password) {
 }
 
 
+
+function update_email($user_id, $email) {
+    $pdo = new PDO("mysql:host=localhost;dbname=php_tasks;charset=utf8", "root", "");
+
+    $sql = "UPDATE `users` SET `email`=:email WHERE id=:id ";
+    $statement = $pdo->prepare($sql);
+
+    $arr = ["id"=>$user_id, "email"=>$email];
+    $statement->execute($arr);
+
+    return true;
+}
+
+
+function update_password($user_id, $password) {
+    $pdo = new PDO("mysql:host=localhost;dbname=php_tasks;charset=utf8", "root", "");
+
+    $sql = "UPDATE `users` SET `password`= :password WHERE id=:id ";
+    $statement = $pdo->prepare($sql);
+
+    $arr = ["id"=>$user_id, "password"=>$password];
+    $statement->execute($arr);
+
+    return true;
+}
+
+
+
 function has_image($user_id) {
 
     $user = get_user_by_id($user_id);

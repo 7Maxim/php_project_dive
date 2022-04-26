@@ -91,7 +91,7 @@ if (empty($edit_user['id'])) {
                                 <!-- password -->
                                 <div class="form-group">
                                     <label class="form-label" for="simpleinput">Пароль</label>
-                                    <input type="password" id="simpleinput" class="form-control" name="password" required>
+                                    <input type="password" id="simpleinput" class="form-control" name="password">
                                 </div>
 
                                 <!-- password confirmation-->
