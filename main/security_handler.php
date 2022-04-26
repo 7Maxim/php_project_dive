@@ -51,9 +51,15 @@ foreach ($users as $user) {
     }
 }
 
+update_email($edit_user_id, $new_email);
+
+if (!empty($new_password)) {
+    update_password($edit_user_id, $new_hashed_password);
+}
 
 
-edit_credentials($edit_user['id'], $new_email, $new_hashed_password);
+
+//edit_credentials($edit_user['id'], $new_email, $new_hashed_password);
 
 set_flash_message('success', 'Профиль успешно обновлен');
 
